@@ -1,6 +1,7 @@
 'use client';
 
 import SplitText from "../../src/blocks/TextAnimations/SplitText/SplitText.jsx";
+import Beams from '../../src/blocks/Backgrounds/Beams/Beams.jsx';
 
 export default function HeroSection() {
   const handleAnimationComplete = () => {
@@ -16,15 +17,28 @@ export default function HeroSection() {
   ];
 
   return (
-    <div id="hero" className="w-full h-screen flex items-center justify-center">
-      <style>{`@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@790&family=Gabarito:wght@606&family=Michroma&display=swap');`}</style>
-      <div className="w-[60vw] h-[70vh] bg-transparent flex flex-col items-center justify-center gap-1">
+    <div id="hero" className="w-full h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Beams background */}
+      <div className="absolute inset-0 w-full h-full z-0">
+        <Beams
+          beamWidth={2}
+          beamHeight={15}
+          beamNumber={12}
+          lightColor="#ffffff"
+          speed={2}
+          noiseIntensity={1.75}
+          scale={0.2}
+          rotation={0}
+        />
+      </div>
+      {/* Hero content */}
+      <div className="w-[60vw] h-[70vh] bg-transparent flex flex-col items-center justify-center gap-1 relative z-10">
         {/* Company name and line */}
         <div className="flex flex-col items-center mb-4 hero_content_inner js-cursor-extend">
           <div className="flex items-center justify-center">
             <span className="block w-10 h-0.5 bg-[#3d3935] mr-4 rounded-full" />
             <span className="tracking-[0.4em] text-[#3d3935] text-lg font-darker-grotesque" style={{ fontWeight: 'normal' }}>
-              MINH PHAM
+              SIDESWITCH
             </span>
           </div>
         </div>
