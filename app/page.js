@@ -1,3 +1,4 @@
+import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AboutMe from './components/AboutMe';
 import Services from './components/Services';
@@ -7,7 +8,8 @@ import SmoothScroll from './components/SmoothScroll';
 export default function Home() {
   return (
     <SmoothScroll>
-      <main >
+      <Navbar />
+      <main>
         <HeroSection />
         <AboutMe />
         <Services />

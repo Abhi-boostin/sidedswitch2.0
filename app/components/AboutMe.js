@@ -4,7 +4,7 @@ import CardSwap, { Card } from '../../src/blocks/Components/CardSwap/CardSwap.js
 
 export default function AboutMe() {
   return (
-    <section className="w-full min-h-screen flex items-center bg-black px-8 md:px-24">
+    <section id="about" className="w-full min-h-screen flex items-center bg-black px-8 md:px-24">
       <div className="max-w-7xl w-full flex flex-col md:flex-row items-center md:items-start justify-between gap-12">
         {/* Left: Text Content */}
         <div className="flex-1 min-w-[320px]">

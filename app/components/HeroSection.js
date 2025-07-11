@@ -16,7 +16,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <div className="w-full h-screen flex items-center justify-center">
+    <div id="hero" className="w-full h-screen flex items-center justify-center">
       <style>{`@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@790&family=Gabarito:wght@606&family=Michroma&display=swap');`}</style>
       <div className="w-[60vw] h-[70vh] bg-transparent flex flex-col items-center justify-center gap-1">
         {/* Company name and line */}
