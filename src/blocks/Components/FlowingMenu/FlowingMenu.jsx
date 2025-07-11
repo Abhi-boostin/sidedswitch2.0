@@ -5,19 +5,19 @@
 import React from "react";
 import { gsap } from "gsap";
 
-function FlowingMenu({ items = [] }) {
+function FlowingMenu({ items = [], itemHeight = 120 }) {
   return (
     <div className="w-full h-full overflow-hidden">
       <nav className="flex flex-col h-full m-0 p-0">
         {items.map((item, idx) => (
-          <MenuItem key={idx} {...item} />
+          <MenuItem key={idx} {...item} itemHeight={itemHeight} />
         ))}
       </nav>
     </div>
   );
 }
 
-function MenuItem({ link, text, image }) {
+function MenuItem({ link, text, image, itemHeight }) {
   const itemRef = React.useRef(null);
   const marqueeRef = React.useRef(null);
   const marqueeInnerRef = React.useRef(null);
@@ -81,22 +81,35 @@ function MenuItem({ link, text, image }) {
     <div
       className="flex-1 relative overflow-hidden text-center shadow-[0_-1px_0_0_#fff]"
       ref={itemRef}
+      style={{ minHeight: itemHeight, height: itemHeight }}
     >
       <a
         className="flex items-center justify-center h-full relative cursor-pointer uppercase no-underline font-semibold text-white text-[4vh] hover:text-[#060010] focus:text-white focus-visible:text-[#060010]"
         href={link}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        style={{ minHeight: itemHeight, height: itemHeight }}
       >
         {text}
       </a>
       <div
         className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none bg-white translate-y-[101%]"
         ref={marqueeRef}
+        style={{ minHeight: itemHeight, height: itemHeight }}
       >
         <div className="h-full w-[200%] flex" ref={marqueeInnerRef}>
           <div className="flex items-center relative h-full w-[200%] will-change-transform animate-marquee">
-            {repeatedMarqueeContent}
+            {Array.from({ length: 4 }).map((_, idx) => (
+              <React.Fragment key={idx}>
+                <span className="text-[#060010] uppercase font-normal text-[4vh] leading-[1.2] p-[1vh_1vw_0]">
+                  {text}
+                </span>
+                <div
+                  className="w-[200px] rounded-[50px] bg-cover bg-center"
+                  style={{ backgroundImage: `url(${image})`, height: itemHeight * 0.6, margin: '2em 2vw', padding: '1em 0' }}
+                />
+              </React.Fragment>
+            ))}
           </div>
         </div>
       </div>
