@@ -10,8 +10,8 @@ const demoItems = [
 
 export default function Services() {
   return (
-    <div id="services" className="w-full h-screen flex items-center justify-center p-0 m-0">
-      <div className="w-full h-[600px] relative">
+    <div id="services" className="w-full h-[60vh] min-h-[300px] flex items-center justify-center p-0 m-0">
+      <div className="w-full h-[300px] sm:h-[400px] md:h-[600px] relative">
         <FlowingMenu items={demoItems} />
       </div>
     </div>
