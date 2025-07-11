@@ -3,6 +3,7 @@
 */
 "use client";
 import React from "react";
+import Link from "next/link";
 import { gsap } from "gsap";
 
 function FlowingMenu({ items = [], itemHeight = 120 }) {
@@ -17,7 +18,11 @@ function FlowingMenu({ items = [], itemHeight = 120 }) {
   );
 }
 
-function MenuItem({ link, text, image, itemHeight }) {
+function toSlug(text) {
+  return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+
+function MenuItem({ text, image, itemHeight }) {
   const itemRef = React.useRef(null);
   const marqueeRef = React.useRef(null);
   const marqueeInnerRef = React.useRef(null);
@@ -83,15 +88,15 @@ function MenuItem({ link, text, image, itemHeight }) {
       ref={itemRef}
       style={{ minHeight: itemHeight, height: itemHeight }}
     >
-      <a
-        className="flex items-center justify-center h-full relative cursor-pointer uppercase no-underline font-semibold text-white text-[4vh] hover:text-[#060010] focus:text-white focus-visible:text-[#060010]"
-        href={link}
+      <Link
+        className="flex items-center justify-center h-full w-full relative cursor-pointer uppercase no-underline font-semibold text-white text-[4vh] hover:text-[#060010] focus:text-white focus-visible:text-[#060010]"
+        href={`/services/${toSlug(text)}`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         style={{ minHeight: itemHeight, height: itemHeight }}
       >
         {text}
-      </a>
+      </Link>
       <div
         className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none bg-white translate-y-[101%]"
         ref={marqueeRef}

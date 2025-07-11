@@ -37,7 +37,7 @@ export default function HeroSection() {
         {/* Motto goes here */}
         <span className="mt-4 text-[#c6bba7] text-base sm:text-lg md:text-xl font-darker-grotesque text-center" style={{ fontWeight: 'normal' }}>
           {/* Add your motto here */}
-          hi this is minh, a product designer based in vietnam. i design products that are simple, intuitive, and delightful to use.fix
+          "We deliver digital experiences that inspire and empower. At SIDESWITCH, our agency is dedicated to transforming ideas into impactful products—crafted with precision, creativity, and a relentless focus on your success. Let us help you stand out, connect, and grow in a world that never stops evolving."
         </span>
       </div>
     </div>
