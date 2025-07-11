@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@790&family=Gabarito:wght@606&family=Michroma&display=swap');
 @import "tailwindcss";
 
@@ -28,4 +29,12 @@ body {
 
 .font-darker-grotesque {
   font-family: 'Darker Grotesque', 'Gabarito', 'Michroma', sans-serif !important;
+}
+
+.font-saira-condensed {
+  font-family: 'Saira Condensed', 'Oswald', 'Outfit', 'Quicksand', 'Didact Gothic', 'Anek Devanagari', 'Alumni Sans Pinstripe', sans-serif;
+}
+
+.font-outfit {
+  font-family: 'Outfit', sans-serif;
 }
