@@ -1,6 +1,7 @@
 'use client';
 
 import CardSwap, { Card } from '../../src/blocks/Components/CardSwap/CardSwap.jsx';
+import Image from 'next/image';
 
 export default function AboutMe() {
   return (
@@ -14,7 +15,7 @@ export default function AboutMe() {
           </div>
           {/* Main headline */}
           <h1 className="font-darker-grotesque text-[#c6bba7] text-[8vw] sm:text-[5vw] md:text-[3vw] leading-[1.08] font-normal text-left">
-            I’m a <span className="text-[#f15a29]">selectively skilled</span> product<br />
+            I'm a <span className="text-[#f15a29]">selectively skilled</span> product<br />
             designer with strong focus on<br />
             producing high quality &<br />
             impactful digital experience.
@@ -30,16 +31,99 @@ export default function AboutMe() {
               pauseOnHover={false}
             >
               <Card>
-                <h3>Card 1</h3>
-                <p>Your content here</p>
+                <div className="w-full h-full flex flex-col">
+                  <div className="flex-1 relative overflow-hidden rounded-t-lg">
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      className="w-full h-full object-cover"
+                    >
+                      <source src="/marketing_tools/tool1.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div className="p-4 bg-white/10 backdrop-blur-sm">
+                    <h3 className="text-[#f15a29] font-bold text-lg mb-2">AI/Automation</h3>
+                    <p className="text-[#c6bba7] text-sm">Intelligent automation solutions to streamline your business processes</p>
+                  </div>
+                </div>
               </Card>
               <Card>
-                <h3>Card 2</h3>
-                <p>Your content here</p>
+                <div className="w-full h-full flex flex-col">
+                  <div className="flex-1 relative overflow-hidden rounded-t-lg">
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      className="w-full h-full object-cover"
+                    >
+                      <source src="/cardweb2.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div className="p-4 bg-white/10 backdrop-blur-sm">
+                    <h3 className="text-[#f15a29] font-bold text-lg mb-2">Website Application</h3>
+                    <p className="text-[#c6bba7] text-sm">Modern, responsive web applications built with cutting-edge technologies</p>
+                  </div>
+                </div>
               </Card>
               <Card>
-                <h3>Card 3</h3>
-                <p>Your content here</p>
+                <div className="w-full h-full flex flex-col">
+                  <div className="flex-1 relative overflow-hidden rounded-t-lg">
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      className="w-full h-full object-cover"
+                    >
+                      <source src="/smtpcard.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div className="p-4 bg-white/10 backdrop-blur-sm">
+                    <h3 className="text-[#f15a29] font-bold text-lg mb-2">SMTP Servers</h3>
+                    <p className="text-[#c6bba7] text-sm">Reliable email infrastructure and delivery solutions for your business</p>
+                  </div>
+                </div>
+              </Card>
+              <Card>
+                <div className="w-full h-full flex flex-col">
+                  <div className="flex-1 relative overflow-hidden rounded-t-lg">
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      className="w-full h-full object-cover"
+                    >
+                      <source src="/marketing.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div className="p-4 bg-white/10 backdrop-blur-sm">
+                    <h3 className="text-[#f15a29] font-bold text-lg mb-2">Marketing Tools</h3>
+                    <p className="text-[#c6bba7] text-sm">Powerful marketing automation and analytics tools to grow your business</p>
+                  </div>
+                </div>
+              </Card>
+              <Card>
+                <div className="w-full h-full flex flex-col">
+                  <div className="flex-1 relative overflow-hidden rounded-t-lg">
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      className="w-full h-full object-cover"
+                    >
+                      <source src="/agency.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div className="p-4 bg-white/10 backdrop-blur-sm">
+                    <h3 className="text-[#f15a29] font-bold text-lg mb-2">Agency Builder</h3>
+                    <p className="text-[#c6bba7] text-sm">Complete solutions to build and scale your digital agency</p>
+                  </div>
+                </div>
               </Card>
             </CardSwap>
           </div>

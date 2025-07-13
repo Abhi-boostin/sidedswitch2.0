@@ -1,7 +1,7 @@
 import FlowingMenu from '../../src/blocks/Components/FlowingMenu/FlowingMenu.jsx';
 
 const demoItems = [
-  { link: '#', text: 'Website-Appllication', image: 'https://picsum.photos/600/400?random=1' },
+  { link: '#', text: 'WebApp & Design', image: 'https://picsum.photos/600/400?random=1' },
   { link: '#', text: 'SMTP Servers', image: 'https://picsum.photos/600/400?random=2' },
   { link: '#', text: 'Marketing Tools', image: 'https://picsum.photos/600/400?random=3' },
   { link: '#', text: 'AI / Automation', image: 'https://picsum.photos/600/400?random=4' },
