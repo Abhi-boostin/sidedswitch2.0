@@ -1,11 +1,61 @@
+'use client';
+
+import Image from 'next/image';
+
+const profileImg = 'https://randomuser.me/api/portraits/women/65.jpg';
+
+const reviews = [
+  {
+    name: 'Lucas Martin',
+    title: 'Growth Hacker, AdBoost',
+    text: '“The marketing tools helped us automate our campaigns and track results in real time. Our ROI has never been better!”',
+  },
+  {
+    name: 'Emma Wilson',
+    title: 'CMO, BrandSprint',
+    text: '“A complete suite for digital marketing. The analytics and automation features are top-notch.”',
+  },
+  {
+    name: 'Noah Kim',
+    title: 'Digital Strategist, Clickly',
+    text: '“Easy to use and powerful. We scaled our campaigns effortlessly thanks to these tools.”',
+  },
+];
+
 export default function MarketingToolsPage() {
   return (
-    <div className="min-h-screen bg-black text-[#c6bba7] flex flex-col items-center justify-center p-8">
-      <h1 className="text-4xl font-bold mb-6">Marketing Tools</h1>
-      <p className="text-lg max-w-2xl text-center font-outfit mb-8">
-        We provide and integrate powerful marketing tools to grow your business. List your tools, integrations, and marketing automation solutions here.
-      </p>
-      {/* Add feature lists, screenshots, or case studies below */}
+    <div className="min-h-screen w-full bg-white text-black flex flex-col">
+      <div className="flex flex-col md:flex-row w-full max-w-6xl mx-auto py-12 px-4 gap-8 md:gap-0">
+        {/* Left: Profile Image and Info */}
+        <div className="flex-1 flex flex-col items-start justify-start md:pr-8">
+          <span className="mb-2 text-gray-500 text-sm">A propos</span>
+          <span className="mb-8 text-right w-full text-gray-500 text-sm hidden md:block">La vision d’une agence,<br/>La passion d’une freelance.</span>
+          <div className="w-full flex justify-center md:justify-start mb-8">
+            <Image src={profileImg} alt="Profile" width={400} height={400} className="rounded-lg object-cover w-full max-w-xs md:max-w-sm" />
+          </div>
+        </div>
+        {/* Right: Main Content */}
+        <div className="flex-1 flex flex-col justify-center">
+          <h1 className="text-2xl md:text-4xl font-bold mb-6">Des outils marketing puissants pour booster votre croissance digitale.</h1>
+          <p className="mb-4 text-base md:text-lg">Nous mettons à votre disposition une suite complète d’outils pour automatiser, analyser et optimiser vos campagnes marketing. Gagnez du temps et maximisez vos résultats grâce à des solutions innovantes.</p>
+          <p className="mb-8 text-base md:text-lg">Rejoignez les entreprises qui font confiance à notre expertise pour accélérer leur développement en ligne.</p>
+          <button className="border-b-2 border-black text-black font-semibold w-fit hover:opacity-80 transition mb-8">LIRE MON HISTOIRE</button>
+        </div>
+      </div>
+      {/* Reviews Section */}
+      <div className="w-full bg-gray-50 py-12 px-4">
+        <h2 className="text-center text-2xl font-bold mb-8">Avis Clients</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {reviews.map((review, idx) => (
+            <div key={idx} className="bg-white rounded-xl shadow p-6 flex flex-col">
+              <div className="flex mb-2 text-yellow-400">{'★★★★★'}</div>
+              <p className="mb-4 text-gray-700">{review.text}</p>
+              <div className="font-bold text-black">{review.name}</div>
+              <div className="text-sm text-gray-500">{review.title}</div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 } 
