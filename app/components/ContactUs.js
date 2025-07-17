@@ -21,17 +21,17 @@ export default function ContactUs() {
           <div className="flex flex-col sm:flex-row gap-8 sm:gap-24 w-full justify-center">
             <ul className="flex flex-col gap-2 items-center sm:items-start">
               {leftLinks.map((item, idx) => (
-                <li key={idx} className="flex items-center gap-2">
+                <li key={idx} className="flex items-center gap-2 opacity-50 cursor-not-allowed">
                   <span className="text-[#f15a29] text-xl sm:text-2xl">&#x25B6;</span>
-                  <a href={item.link} className="font-darker-grotesque text-[#c6bba7] text-xl sm:text-3xl font-normal hover:text-[#f15a29] transition-colors">{item.text}</a>
+                  <span className="font-darker-grotesque text-[#c6bba7] text-xl sm:text-3xl font-normal">{item.text} (coming soon)</span>
                 </li>
               ))}
             </ul>
             <ul className="flex flex-col gap-2 items-center sm:items-start">
               {rightLinks.map((item, idx) => (
-                <li key={idx} className="flex items-center gap-2">
+                <li key={idx} className="flex items-center gap-2 opacity-50 cursor-not-allowed">
                   <span className="text-[#f15a29] text-xl sm:text-2xl">&#x25B6;</span>
-                  <a href={item.link} className="font-darker-grotesque text-[#c6bba7] text-xl sm:text-3xl font-normal hover:text-[#f15a29] transition-colors">{item.text}</a>
+                  <span className="font-darker-grotesque text-[#c6bba7] text-xl sm:text-3xl font-normal">{item.text} (coming soon)</span>
                 </li>
               ))}
             </ul>
